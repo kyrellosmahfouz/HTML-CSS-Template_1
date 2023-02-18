@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+:root {
+    --main-color: #10cab78c;
+    --sec-color: #10cab7;
+}
+
 .special-heading {
     color: #ebeced;
     font-size: 100px;
@@ -11,6 +16,25 @@ body {
     text-align: center;
 }
 
+/* START Scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color, #10cab78c);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--sec-color, #10cab7);
+}
+
+/* END Scroll bar */
+
 /* START SCROLL TO TOP */
 .scttp {
     width: 40px;
@@ -18,13 +42,17 @@ body {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    background-color: orange;
+    background-color: var(--main-color, #10cab78c);
     text-align: center;
     font-size: 25px;
     cursor: pointer;
     margin: -60px;
     transition: 0.3s;
     border-radius: 8px;
+}
+
+.scttp:hover {
+    background-color: var(--sec-color, #10cab7);
 }
 
 .scttp.show {
@@ -168,7 +196,7 @@ body {
 
 .landing .intro-text h1 {
     font-size: 50px;
-    color: #10cab7;
+    color: var(--sec-color, #10cab7);
     margin: 0;
 }
 
@@ -205,7 +233,7 @@ body {
     font-size: 17px;
 }
 
-.features .container .feat .img5 {
+.features .container .feat .imgfeat {
     width: auto;
     user-select: none;
     height: 45px;

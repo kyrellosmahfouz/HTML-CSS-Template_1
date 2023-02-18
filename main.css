@@ -18,7 +18,7 @@ body {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    background-color: white;
+    background-color: orange;
     text-align: center;
     font-size: 25px;
     cursor: pointer;
@@ -34,18 +34,23 @@ body {
 /* END SCROLL TO TOP */
 
 /* start header */
+.header {
+    padding: 0 35px;
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
-    width: 720px;
+    /* width: 720px; */
     height: auto;
     margin: 0 auto;
     align-items: center;
 }
 
 .logo {
-    width: 120px;
-    height: 57px;
+    width: 90px;
+    height: 35px;
+    user-select: none;
 }
 
 .links {
@@ -57,6 +62,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin: 15px 0;
+    cursor: pointer;
 }
 
 .icon span {
@@ -88,7 +95,7 @@ body {
 .header .container .links ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0;
     position: absolute;
     right: 0;
     width: 200px;
@@ -128,10 +135,10 @@ body {
 }
 
 @media (max-width: 750px) {
-    .header .container {
+    /* .header .container {
         width: unset;
         margin: auto 50px;
-    }
+    } */
 
     .header .container .links ul {
         width: 150px;
@@ -144,7 +151,7 @@ body {
 .landing {
     background-image: url(landing.jpg);
     background-size: cover;
-    height: calc(100vh - 57px);
+    height: calc(100vh - 49px);
     background-repeat: no-repeat;
 }
 
@@ -174,7 +181,7 @@ body {
 /* Start features */
 .features {
     background-color: #ddd;
-    padding: 20px 0;
+    padding: 30px 35px;
 }
 
 .features .container {
@@ -200,6 +207,7 @@ body {
 
 .features .container .feat .img5 {
     width: auto;
+    user-select: none;
     height: 45px;
 }
 
@@ -207,14 +215,26 @@ body {
 
 /* Start services */
 .services {
-    padding: 60px 0;
+    padding: 60px 35px;
 }
 
-.services .container p {
+.services .container .p_1 {
     text-align: center;
     font-size: 16px;
-    margin: -30px;
-    width: 100vw;
+    margin: -30px 0 0;
+}
+
+.services .container .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 0 20px;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.services .container .services-content .col .service {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width:550px) {
@@ -222,8 +242,20 @@ body {
         font-size: 80px;
     }
 
-    .services .container p {
-        margin: -25px;
+    .services .container .p_1 {
+        margin: -25px 0 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .services .container .services-content .col .service {
+        text-align: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .services .container .services-content {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 }
 

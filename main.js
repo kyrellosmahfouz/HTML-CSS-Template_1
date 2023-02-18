@@ -16,7 +16,7 @@ function cl() {
 }
 
 window.onscroll = function () {
-    if (this.scrollY >= 700) {
+    if (this.scrollY >= 400) {
         scttp.classList.add("show")
     } else {
         scttp.classList.remove("show")
